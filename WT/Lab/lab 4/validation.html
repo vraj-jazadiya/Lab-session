@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>HTML Form Validation Example</title>
+</head>
+<body>
+    <h1>Sample Form with HTML Validation</h1>
+
+    <form>
+        <label for="email">Email (required):</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">Message (required):</label><br />
+        <textarea id="message" name="message" required></textarea><br /><br />
+
+        <label for="age">Age (between 1 and 99):</label><br />
+        <input type="number" id="age" name="age" min="1" max="99" required /><br /><br />
+
+        <label for="password">Password (4 to 12 characters):</label><br />
+        <input type="password" id="password" name="password" minlength="4" maxlength="12" required /><br /><br />
+
+        <label for="pet">Favorite Pet (dog or cat only):</label><br />
+        <input type="text" id="pet" name="pet" pattern="dog|cat" title="Please enter 'dog' or 'cat'." required /><br /><br />
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
