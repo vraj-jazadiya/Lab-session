@@ -1,105 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>My Resume</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 40px;
-        }
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
 
-        header, section {
-            background-color: #e3f2fd;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-        h1 {
-            text-align: center;
-            color: #0d47a1;
-            text-transform: uppercase;
-        }
+    .upper {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
 
-        h2 {
-            color: #1565c0;
-            font-variant: small-caps;
-        }
+    .pic {
+      flex: 1;
+      max-width: 150px;
+      margin-right: 20px;
+    }
 
-        ul {
-            list-style-type: circle;
-            padding-left: 20px;
-        }
+    .pic img {
+      width: 100%;
+      height: auto;
+    }
 
-        ol {
-            list-style-type: upper-roman;
-            padding-left: 20px;
-        }
+    .info {
+      flex: 3;
+    }
 
-        img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #1565c0;
-            display: block;
-            margin: auto;
-        }
+    .info h1 {
+      margin: 0;
+      font-size: 28px;
+    }
 
-        section p {
-            font-size: 16px;
-            text-align: justify;
-            text-indent: 20px;
-        }
+    .info h3 {
+      margin-top: 5px;
+      color: #666;
+    }
 
-        /* Using selection tag */
-        ::selection {
-            background: yellow;
-            color: red;
-        }
-    </style>
+    .info p {
+      margin: 5px 0;
+    }
+
+    .info a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    .lower {
+      margin-top: 20px;
+    }
+
+    .lower > div {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .skills ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      display: inline-block;
+      margin-right: 40px;
+    }
+
+    .exp h3 {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="upper">
+      <div class="pic">
+        <img src="profileIcon.png" alt="Profile Picture">
+      </div>
 
-    <header>
-        <h1>John Doe</h1>
-        <p style="text-align:center;">Email: johndoe@example.com | Phone: +91-9876543210</p>
-        <img src="https://via.placeholder.com/120" alt="Profile Picture">
-    </header>
+      <div class="info">
+        <h1>Vraj Jazadiya</h1>
+        <h3>Cyber Security Student</h3>
+        <p>Vadodara, Gujarat, India</p>
+        <p>+91 999 888 7777</p>
+        <p><a href="mailto:vrajjazadiya@gmail.com">vrajjazadiya@gmail.com</a></p>
+        <p><a href="https://github.com/vraj-jazadiya" target="_blank">GitHub</a></p>
+        <p><a href="#" target="_blank">Twitter</a></p>
+      </div>
+    </div>
 
-    <section>
-        <h2>Career Objective</h2>
-        <p>To obtain a position that allows me to learn and grow professionally while contributing to the success of the organization.</p>
-    </section>
+    <div class="lower">
+      <div class="profile">
+        <label><b>Profile:</b></label>
+        <p>Myself Vraj Jazadiya, pursuing BCA.<br>Learning Web Development and Cyber Security.</p>
+      </div>
 
-    <section>
-        <h2>Skills</h2>
+      <div class="skills">
+        <label><b>Skills:</b></label>
+		</br>
         <ul>
-            <li>HTML5, CSS3</li>
-            <li>Responsive Design</li>
-            <li>JavaScript Basics</li>
+          <li>Network Security</li>
+          <li>Burp Suite</li>
+          <li>Python</li>
+          <li>Bash Scripting</li>
+          <li>Kali Linux</li>
+          <li>WordPress</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <ol>
-            <li>B.Sc. in Computer Science – XYZ University</li>
-            <li>12th – ABC School</li>
-            <li>10th – ABC School</li>
-        </ol>
-    </section>
-
-    <section>
-        <h2>Hobbies</h2>
         <ul>
-            <li>Photography</li>
-            <li>Blogging</li>
-            <li>Gaming</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>MySQL</li>
+          <li>JavaScript</li>
         </ul>
-    </section>
+      </div>
 
+      <div class="exp">
+        <label><b>Experience:</b></label>
+        <h3><b>Cyber Security / Bug Bounty</b></h3>
+        <p id="company">Company XYZ</p>
+        <p>January 2020 - Present</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

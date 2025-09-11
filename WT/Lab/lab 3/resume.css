@@ -1,0 +1,66 @@
+.pic{
+	width: 200px;              
+	height: 200px;                          
+	border: 5px solid ; 
+	margin: 30px;              
+}
+
+body{
+	margin:0;
+	paddng:0;
+	background: #DEDEDF;
+	font-family:arial;
+}
+
+.upper{
+	display:flex;
+	justify-content:space-between;
+	gap:20px;
+}
+
+.info{
+	width:80%;
+	text-align:left;
+}
+
+.upper h1{
+	margin-bottom:0;
+}
+.upper h3{
+	margin-top:0;
+}
+
+.lower{
+	display:block;
+}
+
+.profile{
+	padding:0 100px;
+	display:flex;
+	gap:60px;
+}
+.skills{
+	padding:0 100px;
+	display:flex;
+	gap:60px;
+}
+.exp{
+	padding:0 100px;
+	display:flex;
+	gap:20px;
+}
+
+label{
+	text-align:left;
+	padding: 20px;
+}
+
+#company{
+	color: green;
+	margin:0;
+	padding:0;
+}
+
+.exp h3{
+	padding:0;
+}
