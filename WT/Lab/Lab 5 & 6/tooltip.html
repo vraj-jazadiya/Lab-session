@@ -1,0 +1,52 @@
+<html>
+<head>
+
+  <title>Simple Tooltip</title>
+  <style>
+    .box {
+      position: relative;
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .selection {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .box:hover .selection {
+      display: block;
+    }
+
+    .selection ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    Subjects
+    <div class="selection">
+      <ul>
+        <li>Math</li>
+        <li>Science</li>
+        <li>English</li>
+        <li>History</li>
+        <li>Geography</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
