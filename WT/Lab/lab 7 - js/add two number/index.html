@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Calcator by Vraj</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>
+            Simple sum of two number
+        </h1>
+        <div class="container">
+        <label for="num1">Enter the first Number: </label>
+        <input type="number" id="num1"/>
+		
+        </br>
+        <label for="num2">Enter the second Number: </label>
+        <input type="number" id="num2"/>
+        </br>
+		
+        <button onclick="addSum()">Click here to ADD</button>
+        <div id="result">SUM = </div>
+        </div>
+        <script>
+            function addSum(){
+                const num1 = Number(document.getElementById('num1').value);
+                const num2 = Number(document.getElementById('num2').value);
+
+                if (isNaN(num1) || isNaN(num2)){
+                    document.getElementById('result').textContent = "Plz enter only number";
+					return;
+                }
+				
+				const sum = num1+num2;
+				document.getElementById('result').textContent = "Sum = " + sum;
+            }
+            
+        </script>
+    </body>
+	
+</html>
