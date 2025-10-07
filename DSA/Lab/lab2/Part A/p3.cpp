@@ -3,41 +3,45 @@ using namespace std;
 
 int main()
 {
-    int m,n,i,j;
+    int m, n, i, j;
 
-    cout<<"enter the rows for the matrix : ";cin>>m;
-    cout<<"enter the cols for the matrix : ";cin>>n;
+    cout << "enter the rows for the matrix : ";
+    cin >> m;
+    cout << "enter the cols for the matrix : ";
+    cin >> n;
 
-    int arr[m][n],tr[n][m] = {0};
+    int arr[m][n];
+    int tr[n][m];
 
-    cout<<"\ninput elements for the matrix : \n";
-    for(i = 0;i < m;i++)
+    cout << "\ninput elements for the matrix : \n";
+    for (i = 0; i < m; i++)
     {
-        for(j = 0;j < n;j++)
+        for (j = 0; j < n; j++)
         {
-            cout<<"enter for element at "<<i<<j<<" : ";cin>>arr[i][j];
+            cout << "enter for element at " << i << j << " : ";
+            cin >> arr[i][j];
         }
-        cout<<endl;
+        cout << endl;
     }
 
-    cout<<"\nORIGINAL ARRAY : \n";
-    for(i = 0;i < n;i++)
+    cout << "\nORIGINAL ARRAY : \n";
+    for (i = 0; i < n; i++)
     {
-        for(j = 0;j < m;j++)
+        for (j = 0; j < m; j++)
         {
-            cout<<arr[i][j]<<" ";
+            cout << arr[i][j] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
-    cout<<"\nTRANSPOSE MATRIX : \n";
-    for(i = 0;i < n;i++)
+    cout << "\nTRANSPOSE MATRIX : \n";
+    for (i = 0; i < n; i++)
     {
-        for(j = 0;j < m;j++)
+        for (j = 0; j < m; j++)
         {
-            cout<<arr[j][i]<<" ";
+            cout << arr[j][i] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;
