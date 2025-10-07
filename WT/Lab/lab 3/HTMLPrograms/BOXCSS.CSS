@@ -1,8 +1,0 @@
-.box-model {
-  width: 200px;              /* Content width */
-  height: 100px;             /* Content height */
-  padding: 20px;             /* Space inside the box */
-  border: 5px solid #007BFF; /* Blue border */
-  margin: 30px;              /* Space outside the box */
-  background-color: #f2f2f2; /* Background color of the content + padding area */
-}
