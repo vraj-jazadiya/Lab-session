@@ -3,23 +3,24 @@ using namespace std;
 
 int main()
 {
-    int arr[10] = {12,34,35,96,88,44,22},el,i,flag = 0;
+    int arr[10] = {10,20,30,40,50};
+    int x,i,flag = 0;
 
-    cout<<"what element you want to find? : ";
-    cin>>el;
+    cout<<"find x ? : ";
+    cin>>x;
 
     for(i = 0;i < 10;i++)
     {
-        if (el == arr[i])
+        if (x == arr[i])
         {
-            cout<<"element "<<el<<" was found at index "<<i<<endl;
+            cout<<"element " << x << " found at index " << i << endl;
             flag++;
         }
     }
 
     if(!flag)
     {
-        cout<<"Element not found.";
+        cout<<"X not found.";
     }
 
     return 0;

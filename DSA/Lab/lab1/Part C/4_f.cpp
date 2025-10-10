@@ -1,46 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int arr[10],n,i,el,pos;
+int main() {
+    int arr[10] = {10, 20, 30, 40, 50};
+    int n = 5;
+    int pos = 3;
+    int val = 99;
 
-    cout<<"enter the size of the array = ";
-    cin>>n;
-
-    cout<<"\ninsert values into the array :"<<endl;
     for (int i = 0; i < n; i++)
-    {
-        cout<<"enter for index "<<i<<" : ";
-        cin>>arr[i];
-    }  
-    cout<<endl;
+        cout << arr[i] << " ";
 
-    cout<<"ORIGINAL ARRAY :"<<endl;
-    for (int i = 0; i < n; i++)
-    {
-        cout<<arr[i]<<" ";
-    }  
-    cout<<endl;
-
-    cout<<"insert the element to add : ";
-    cin>>el;
-    cout<<"select where to add the given element : ";
-    cin>>pos;
-    cout<<endl;
-
-    for (int i = 10; i > pos; i--)
-    {
+    cout << endl;
+    for (int i = n; i >= pos; i--)
         arr[i] = arr[i - 1];
-    }
-    arr[pos] = el;
+
+    arr[pos - 1] = val;
     n++;
 
-    cout<<"array after adding new element : \n";
+    cout << endl;
     for (int i = 0; i < n; i++)
-    {
-        cout<<arr[i]<<" ";
-    }
+        cout << arr[i] << " ";
 
+    cout << "\ndone" << endl;
     return 0;
 }

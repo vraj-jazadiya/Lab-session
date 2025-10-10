@@ -1,24 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int arr[10],n,i,min;
+int main() {
+    int n = 6;
+    int arr[n] = {5, 12, 9, 21, 3, 18};
 
-    cout<<"enter the size of the array for checking: ";
-    cin>>n;
+    int smallest = arr[0];
 
-    for(i = 0;i < n;i++)
-    {
-        cout<<"enter for index "<<i<<" ";
-        cin>>arr[i];
-
-        if(min > arr[i])
-        {
-            min = arr[i];
-        }
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < smallest)
+            smallest = arr[i];
     }
 
-    cout<<"smallest element of the array : "<<min;
+    cout << "Smallest x: " << smallest << endl;
+
     return 0;
 }

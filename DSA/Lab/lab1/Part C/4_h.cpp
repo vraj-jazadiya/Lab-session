@@ -1,56 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int arr[10],n,el,i,flag = 0;
-    
-    cout<<"enter the size of the array : ";
-    cin>>n;
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int key = 30; 
+    bool found = false;
 
-    for(i = 0;i < n;i++)
-    {
-        cout<<"enter element for index "<<i<<" : ";
-        cin>>arr[i];
-    }
-
-    cout<<"\nTHE ARRAY :\n";
-    for (i = 0; i < n; i++)
-    {
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-
-    cout<<"\nwhat element you want to find? : ";
-    cin>>el;
-
-    for(i = 0;i < 10;i++)
-    {
-        if (el == arr[i])
-        {
-            cout<<"\nelement "<<el<<" was found at index "<<i<<endl;
-            flag++;
-            if (i == 0)
-            {
-                cout<<"best case possible !!,as element found at index 0";
-            }
-            else if(i == n-1)
-            {
-                cout<<"worst case possible !!,as element was found at last index";
-            }
-            else
-            {
-                cout<<"average case !!,as element was found somewhere in between";
-            }
-            
-            
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            cout << "Element " << key << " found at pos " << i + 1 << endl;
+            found = true;
+            break;
         }
     }
 
-    if(flag == 0)
-    {
-        cout<<"\nelement was not available in given array !!\n";
-    }
+    if (!found)
+        cout << "Element " << key << " not found" << endl;
 
     return 0;
 }

@@ -1,24 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int arr[10],n,i,max=0;
+int main() {
+    int n = 6;
+    int arr[n] = {5, 12, 9, 21, 3, 18};
+    
+    int largest = arr[0];
 
-    cout<<"enter the size of the array for checking : ";
-    cin>>n;
-
-    for(i = 0;i < n;i++)
-    {
-        cout << "enter for index " << i <<" ";
-        cin >> arr[i];
-
-        if(max < arr[i])
-        {
-            max = arr[i];
-        }
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > largest)
+            largest = arr[i];
     }
 
-    cout <<"biggest element of the array : " << max;
+    cout << "Largest x: " << largest << endl;
+
     return 0;
 }
