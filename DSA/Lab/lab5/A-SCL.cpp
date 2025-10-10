@@ -17,7 +17,7 @@ public:
     ~SinglyCircularList() {
         if (!last) return;
         Node* curr = last->next;
-        last->next = NULL; // Break the circular link to help deletion
+        last->next = NULL; 
         while (curr) {
             Node* next = curr->next;
             delete curr;
@@ -50,7 +50,7 @@ public:
 
     void deleteNode(int val) {
         if (!last) {
-            cout << "List is empty. Cannot delete.\n";
+            cout << "List is empty\n";
             return;
         }
 
@@ -62,7 +62,6 @@ public:
             if (curr->data == val) {
                 found = true;
 
-                // If only one node in the list
                 if (curr == prev) {
                     delete curr;
                     last = NULL;
@@ -74,7 +73,7 @@ public:
                     delete curr;
                 }
 
-                cout << "Deleted node with value: " << val << endl;
+                cout << "Deleted: " << val << endl;
                 return;
             }
             prev = curr;
@@ -82,7 +81,7 @@ public:
         } while (curr != last->next);
 
         if (!found) {
-            cout << "Value " << val << " not found in the list.\n";
+            cout << val << " not found \n";
         }
     }
 
@@ -105,23 +104,23 @@ int main() {
     SinglyCircularList scl;
     int choice, val;
     do {
-        cout << "\n--- Singly Circular Linked List Menu ---\n";
+        cout << "\nSingly Circular Linked List Menu ---\n";
         cout << "1. Insert at Beginning\n2. Insert at End\n3. Delete Node\n4. Display\n0. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
         switch (choice) {
             case 1:
-                cout << "Enter value: ";
+                cout << "Enter: ";
                 cin >> val;
                 scl.insertAtBeginning(val);
                 break;
             case 2:
-                cout << "Enter value: ";
+                cout << "Enter: ";
                 cin >> val;
                 scl.insertAtEnd(val);
                 break;
             case 3:
-                cout << "Enter value to delete: ";
+                cout << "delete: ";
                 cin >> val;
                 scl.deleteNode(val);
                 break;
@@ -129,10 +128,10 @@ int main() {
                 scl.display();
                 break;
             case 0:
-                cout << "Exiting...\n";
+                cout << "Exiting\n";
                 break;
             default:
-                cout << "Invalid choice. Try again.\n";
+                cout << "Invalid choice\n";
         }
     } while (choice != 0);
 

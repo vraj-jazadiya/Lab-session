@@ -42,7 +42,7 @@ public:
 
     void deleteNode(int val) {
         if (!head) {
-            cout << "List is empty. Cannot delete.\n";
+            cout << "List is empty\n";
             return;
         }
 
@@ -58,7 +58,7 @@ public:
         } while (curr != head);
 
         if (!toDelete) {
-            cout << "Value " << val << " not found in the list.\n";
+            cout << "Value " << val << " not found\n";
             return;
         }
 
@@ -73,7 +73,7 @@ public:
         }
 
         delete toDelete;
-        cout << "Deleted node with value: " << val << endl;
+        cout << "Deleted " << val << endl;
     }
 
     void display() const {
@@ -97,7 +97,7 @@ int main() {
     int choice, val;
 
     do {
-        cout << "\n--- Doubly Circular Linked List Menu ---\n";
+        cout << "\nDoubly Circular Linked List Menu ---\n";
         cout << "1. Insert at End\n";
         cout << "2. Delete Node\n";
         cout << "3. Display\n";
@@ -107,12 +107,12 @@ int main() {
 
         switch (choice) {
             case 1:
-                cout << "Enter value to insert: ";
+                cout << "insert: ";
                 cin >> val;
                 dcl.insertEnd(val);
                 break;
             case 2:
-                cout << "Enter value to delete: ";
+                cout << "delete: ";
                 cin >> val;
                 dcl.deleteNode(val);
                 break;
@@ -120,10 +120,10 @@ int main() {
                 dcl.display();
                 break;
             case 0:
-                cout << "Exiting...\n";
+                cout << "Exiting\n";
                 break;
             default:
-                cout << "Invalid choice. Try again.\n";
+                cout << "Invalid choice\n";
         }
     } while (choice != 0);
 

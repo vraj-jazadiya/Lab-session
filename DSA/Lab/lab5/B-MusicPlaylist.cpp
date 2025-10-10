@@ -20,7 +20,7 @@ public:
 
         Song* start = current;
         Song* temp = current->next;
-        current->prev->next = NULL;  // Break circular link to help deletion
+        current->prev->next = NULL; 
 
         while (temp) {
             Song* next = temp->next;
@@ -68,7 +68,7 @@ public:
             }
             temp = temp->next;
         } while (temp != current);
-        cout << "Song \"" << name << "\" not found in the playlist.\n";
+        cout << "Song \"" << name << "\" not found\n";
     }
 
     void playNext() {
@@ -103,19 +103,19 @@ int main() {
     string name;
 
     do {
-        cout << "\n--- Music Playlist Menu ---\n";
+        cout << "\nMusic Playlist Menu ---\n";
         cout << "1. Add Song\n2. Remove Song\n3. Play Next\n4. Play Previous\n5. Show Current\n0. Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
         cin.ignore(); 
         switch (choice) {
             case 1:
-                cout << "Enter song name: ";
+                cout << "name: ";
                 getline(cin, name);
                 pl.addSong(name);
                 break;
             case 2:
-                cout << "Enter song name to remove: ";
+                cout << "Enter song remove: ";
                 getline(cin, name);
                 pl.removeSong(name);
                 break;
@@ -129,10 +129,10 @@ int main() {
                 pl.showCurrent();
                 break;
             case 0:
-                cout << "Exiting...\n";
+                cout << "Exiting\n";
                 break;
             default:
-                cout << "Invalid choice, try again.\n";
+                cout << "Invalid choice\n";
         }
     } while (choice != 0);
     return 0;
