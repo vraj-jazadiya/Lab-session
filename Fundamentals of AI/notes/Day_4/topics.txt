@@ -1,0 +1,39 @@
+Problem formulation and search 
+space exploration
+informed search
+uninformed search
+Uninformed search algorithms:
+ depth-first search,
+ breadth-first search,
+
+Informed search algorithms:
+
+Breadth-First Search (BFS)Advantages:
+Advantages:Shortest Path: 
+Guarantees finding the shortest path in any 
+unweighted graph.Completeness: 
+Always finds a solution if one 
+exists, even in large or cyclic graphs.
+No Endless Traversal: Will not get trapped 
+traversing down a single infinite-depth branch
+Disadvantages:High Memory Consumption: 
+Because BFS stores all nodes of a level at
+ once to generate the next level, its space
+ complexity is high. This can quickly exhaust
+ RAM on large trees or graphs.Speed: It can be 
+slower than DFS if the target node is located 
+very deep down in the graph
+
+Depth-First Search (DFS)Advantages:Memory Efficient: Uses much less memory (only O(h) for the path stack, where h is the maximum depth) because it only remembers the nodes
+ directly along the current active path.Fast Target
+ Discovery: Can find a solution exceptionally fast
+ if it immediately takes the correct path down to the target node.Well-suited for Deep Structures: Extremely
+ efficient for exploring deep structures or evaluating conditions across all endpoints (e.g., in game 
+AI or tree puzzles).Disadvantages:No Shortest
+ Path Guarantee: Does not guarantee finding 
+the shortest route to a target.Can Get Trapped:
+ Can loop endlessly or get stuck exploring an 
+infinitely deep or irrelevant branch if there 
+are cycles and no depth limit.Sub-optimal 
+Solutions: Might find a longer, more convoluted
+ path first rather than a more direct solution

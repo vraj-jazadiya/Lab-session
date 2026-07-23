@@ -1,0 +1,7 @@
+Definitions and goals of artificial intelligence, 
+Philosophy of AI, 
+History of AI, 
+limitations of symbolic knowledge representation through a production system or an 
+expert system,
+ Turing Test,
+Applications and impact of AI
