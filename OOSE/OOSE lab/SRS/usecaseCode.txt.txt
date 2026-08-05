@@ -1,0 +1,196 @@
+@startuml
+title Online Course Learning System - Professional Use Case Diagram
+
+left to right direction
+skinparam shadowing false
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+skinparam usecase {
+    BackgroundColor White
+    BorderColor Black
+}
+
+'==========================
+' ACTORS
+'==========================
+
+actor Learner
+actor Instructor
+actor Admin
+
+actor "Payment Gateway" as PG
+actor "Email Service" as Mail
+
+'==========================
+' SYSTEM
+'==========================
+
+rectangle "Online Course Learning System" {
+
+usecase "Authentication" as Auth
+usecase "Login" as Login
+usecase "Register" as Register
+usecase "Forgot Password" as Forgot
+usecase "Verify Email" as Verify
+usecase "Two Factor Authentication" as MFA
+
+usecase "Course Lifecycle" as Course
+usecase "Browse Courses" as Browse
+usecase "Search & Filter" as Search
+
+usecase "Enrollment" as Enroll
+
+usecase "Payment" as Payment
+usecase "UPI Payment" as UPI
+usecase "Card Payment" as Card
+usecase "Net Banking" as Net
+usecase "Wallet Payment" as Wallet
+usecase "Apply Coupon" as Coupon
+usecase "Redeem Gift Card" as Gift
+
+usecase "Learning" as Learn
+usecase "Track Progress" as Progress
+usecase "Download Resources" as Download
+usecase "Bookmark Lesson" as Bookmark
+
+usecase "Assessment" as Assess
+usecase "View Result" as Result
+usecase "Retake Quiz" as Retake
+
+usecase "Certificate" as Cert
+usecase "Check Eligibility" as Eligible
+usecase "Share Certificate" as Share
+
+usecase "Communication" as Comm
+usecase "Discussion Forum" as Forum
+usecase "Course Review" as Review
+
+usecase "Administration" as Administration
+usecase "Manage Users" as Users
+usecase "Manage Courses" as Courses
+usecase "Manage Payments" as Payments
+usecase "Reports & Analytics" as Reports
+}
+
+'==========================
+' PRIMARY ACTORS
+'==========================
+
+Learner -- Auth
+Learner -- Course
+Learner -- Enroll
+Learner -- Learn
+Learner -- Assess
+Learner -- Cert
+Learner -- Comm
+
+Instructor -- Auth
+Instructor -- Course
+Instructor -- Learn
+Instructor -- Assess
+Instructor -- Comm
+
+Admin -- Auth
+Admin -- Administration
+Admin -- Course
+
+'==========================
+' EXTERNAL ACTORS
+'==========================
+
+PG -- UPI
+PG -- Card
+PG -- Net
+PG -- Wallet
+
+Mail -- Verify
+Mail -- Cert
+
+'==========================
+' INCLUDE
+'==========================
+
+Auth ..> Login : <<include>>
+Auth ..> Register : <<include>>
+
+Register ..> Verify : <<include>>
+Forgot ..> Verify : <<include>>
+
+Course ..> Browse : <<include>>
+
+Enroll ..> Payment : <<include>>
+
+Learn ..> Progress : <<include>>
+
+Assess ..> Result : <<include>>
+
+Cert ..> Eligible : <<include>>
+
+Administration ..> Users : <<include>>
+Administration ..> Courses : <<include>>
+Administration ..> Payments : <<include>>
+Administration ..> Reports : <<include>>
+
+'==========================
+' EXTEND
+'==========================
+
+MFA ..> Login : <<extend>>
+
+Search ..> Course : <<extend>>
+
+Coupon ..> Enroll : <<extend>>
+Gift ..> Enroll : <<extend>>
+
+Download ..> Learn : <<extend>>
+Bookmark ..> Learn : <<extend>>
+
+Retake ..> Assess : <<extend>>
+
+Share ..> Cert : <<extend>>
+
+Forum ..> Comm : <<extend>>
+Review ..> Comm : <<extend>>
+
+'==========================
+' GENERALIZATION
+'==========================
+
+UPI --|> Payment
+Card --|> Payment
+Net --|> Payment
+Wallet --|> Payment
+
+'==========================
+' NOTES
+'==========================
+
+note right of Coupon
+Promo Codes
+
+SAVE20
+NEWUSER
+STUDENT50
+end note
+
+note right of Wallet
+Wallets
+
+Paytm
+PhonePe
+Amazon Pay
+end note
+
+note right of Reports
+Analytics
+
+Revenue
+
+Enrollments
+
+Course Rating
+
+Completion Rate
+end note
+
+@enduml
