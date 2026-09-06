@@ -81,7 +81,7 @@ def get_neighbors(position, has_key):
 
 
 # A* Search
-def solve():
+def i_solve():
 
     # State = current position + whether key is collected
     initial_state = (start, False)
@@ -146,7 +146,7 @@ def solve():
 
 
 # Run the program
-solution = solve()
+solution = i_solve()
 
 if solution:
     print("Path from Start to Goal:")
@@ -159,4 +159,4 @@ if solution:
     print("Key collected and goal reached successfully.")
 
 else:
-    print("No solution found.")
+    print("No solution found.") #homoo

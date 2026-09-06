@@ -70,7 +70,7 @@ def heuristic(state, goal):
 
 
 # A* Search
-def a_star(start, goal):
+def i_a_star(start, goal):
 
     # Priority queue
     priority_queue = []
@@ -155,7 +155,7 @@ goal = [
 
 
 # Solve using A* Search
-solution = a_star(start, goal)
+solution = i_a_star(start, goal)
 
 
 # Display the solution
@@ -167,4 +167,4 @@ if solution:
         print_board(state)
 
 else:
-    print("No solution found")
+    print("No solution found") #homoo

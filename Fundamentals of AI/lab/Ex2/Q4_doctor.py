@@ -26,8 +26,8 @@ pairs = [
 
 
 def chatty():
-    print("Hi, I'm Chatty and I chat alot ;)")
-    print("Please type lowercase English language to start a conversation.")
+    print("Hi, I'm Chatty and I chat alot and_u ;)")
+    print("Please type lowercase English language to start a conversation.") #homoo
     print("Type quit to leave")
 
     chat = Chat(pairs, my_dummy_reflections)

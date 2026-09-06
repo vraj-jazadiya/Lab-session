@@ -25,8 +25,8 @@ for i in range(rows):
             goal = (i, j)
 
 
-# Manhattan Distance heuristic
-def heuristic(node):
+# Manhattan Distance Heuristic
+def i_heuristic(node):
     x, y = node
     gx, gy = goal
     return abs(gx - x) + abs(gy - y)
@@ -36,7 +36,7 @@ def heuristic(node):
 def a_star():
     # Priority queue: (f, g, position, path)
     # f(n) = g(n) + h(n)
-    pq = [(heuristic(start), 0, start, [start])]
+    pq = [(i_heuristic(start), 0, start, [start])]
 
     visited = set()
 
@@ -70,7 +70,7 @@ def a_star():
                 # Check that the cell is not an obstacle
                 if grid[nx][ny] != '#':
                     new_g = g + 1
-                    new_f = new_g + heuristic((nx, ny))
+                    new_f = new_g + i_heuristic((nx, ny))
 
                     heapq.heappush(
                         pq,
@@ -90,5 +90,5 @@ if path:
 
     print("\nNumber of moves:", len(path) - 1)
 else:
-    print("No path found.")
+    print("No path found.") #homoo
     

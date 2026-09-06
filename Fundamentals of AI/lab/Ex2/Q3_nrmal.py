@@ -26,7 +26,7 @@ pairs = [
         ["Hello", "Hey there"]
     ],
     [
-        r"(.*) age?",
+        r"(.*) age?", #homoo
         ["I'm a computer program dude\nSeriously you are asking me this?"]
     ],
     [
@@ -88,7 +88,7 @@ pairs = [
 
 
 def chatty():
-    print("Hi, I'm Chatty and I chat alot ;)")
+    print("Hi, I'm Chatty and I chat alot and_u ;)")
     print("Please type lowercase English language to start a conversation.")
     print("Type quit to leave")
 

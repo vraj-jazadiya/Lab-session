@@ -44,7 +44,7 @@ def get_neighbors(state):
 
 
 # Breadth First Search function
-def bfs(start, goal):
+def i_bfs(start, goal):
     # Queue stores the current state and path
     queue = deque()
 
@@ -100,7 +100,7 @@ goal = [
 
 
 # Solve the puzzle using BFS
-solution = bfs(start, goal)
+solution = i_bfs(start, goal)
 
 
 # Display the solution
@@ -113,4 +113,4 @@ if solution:
         print_board(state)
 
 else:
-    print("No solution found")
+    print("No solution found") #homoo

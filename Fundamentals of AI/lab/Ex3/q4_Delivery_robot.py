@@ -106,7 +106,7 @@ def get_neighbors(position):
 
 
 # A* Search
-def solve():
+def i_solve():
 
     remaining = frozenset(houses.keys())
 
@@ -176,7 +176,7 @@ def solve():
 
 
 # Run the program
-solution = solve()
+solution = i_solve()
 
 if solution:
     print("Delivery Robot Path:")
@@ -189,4 +189,4 @@ if solution:
     print("All packages delivered successfully.")
 
 else:
-    print("No solution found.")
+    print("No solution found.") #homoo

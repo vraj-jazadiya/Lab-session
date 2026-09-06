@@ -42,8 +42,8 @@ def get_neighbors(state):
 
 
 # Depth First Search function
-def dfs(start, goal):
-    # Stack stores current state and path followed to reach it
+def i_dfs(start, goal):
+    # Stack stores current state and path followed to reach it blaze
     stack = [(start, [start])]
 
     # Set stores already visited states
@@ -95,7 +95,7 @@ goal = [
 
 
 # Solve the puzzle using DFS
-solution = dfs(start, goal)
+solution = i_dfs(start, goal)
 
 
 # Display the solution
@@ -107,4 +107,4 @@ if solution:
     for state in solution:
         print_board(state)
 else:
-    print("No solution found")
+    print("No solution found") #homoo

@@ -72,7 +72,7 @@ pairs = [
     ],
     [
         r"when are the examinations conducted ?",
-        ["Examinations are conducted according to the academic calendar."]
+        ["Examinations are conducted according to the academic calendar."] #homoo
     ],
     [
         r"do you provide placement assistance ?",
@@ -111,9 +111,9 @@ pairs = [
 
 def educational_chatbot():
     print("==============================================")
-    print("   Educational Institution Chatbot")
+    print("   Educational Institution Chatbot") 
     print("==============================================")
-    print("Ask me about admissions, courses, fees,")
+    print("u_Ask me about admissions, courses, fees,")
     print("scholarships, exams, hostel, placements, etc.")
     print("Type 'quit' to exit.\n")
 

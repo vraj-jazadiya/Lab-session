@@ -39,7 +39,7 @@ pairs = [
         ["Yes, free delivery is available on eligible orders."]
     ],
     [
-        r"what is your return policy ?",
+        r"what is your return policy ?", #homoo
         ["Most products can be returned within 7 days of delivery, subject to the product's return policy."]
     ],
     [
@@ -109,7 +109,7 @@ def ecommerce_chatbot():
     print("==========================================")
     print("   Welcome to Our E-Commerce Chatbot")
     print("==========================================")
-    print("Ask me about products, orders, delivery,")
+    print("u_Ask me about products, orders, delivery,")
     print("returns, payments, refunds, and more.")
     print("Type 'quit' to exit.\n")
 

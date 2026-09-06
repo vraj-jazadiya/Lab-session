@@ -71,7 +71,7 @@ def heuristic(state, goal):
 
 
 # Greedy Best First Search
-def greedy_best_first(start, goal):
+def i_greedy_best_first(start, goal):
 
     # Priority queue
     priority_queue = []
@@ -143,7 +143,7 @@ goal = [
 
 
 # Solve using Greedy Best First Search
-solution = greedy_best_first(start, goal)
+solution = i_greedy_best_first(start, goal)
 
 
 # Display the solution
@@ -155,4 +155,4 @@ if solution:
         print_board(state)
 
 else:
-    print("No solution found")
+    print("No solution found") #homoo

@@ -14,7 +14,7 @@ pairs = [
     [
         r"quit",
         [
-            "Bye! Take care. See you soon :)",
+            "Bye! Take care. See you soon :)", #homoo
             "It was nice talking to you. See you soon :)"
         ]
     ],
@@ -22,7 +22,7 @@ pairs = [
 
 def chatty():
     print(
-        "Hi, I'm Chatty and I chat a lot ;)\n"
+        "Hi, I'm Chatty and I chat a lot and_u ;)\n"
         "Please type lowercase English language to start a conversation.\n"
         "Type quit to leave."
     )

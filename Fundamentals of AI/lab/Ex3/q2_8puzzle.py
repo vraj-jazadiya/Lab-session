@@ -69,7 +69,7 @@ def get_neighbors(state):
 
 
 # A* Search
-def solve():
+def i_solve():
     # (f, g, state, path)
     priority_queue = [
         (heuristic(initial), 0, initial, [initial])
@@ -110,7 +110,7 @@ def print_puzzle(state):
 
 
 # Solve the puzzle
-solution = solve()
+solution = i_solve()
 
 if solution:
     print("Solution found!")
@@ -121,4 +121,4 @@ if solution:
         print("Step", step)
         print_puzzle(state)
 else:
-    print("No solution found.")
+    print("No solution found.") #homoo

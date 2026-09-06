@@ -70,7 +70,7 @@ def get_neighbors(position):
 
 
 # A* Search
-def solve():
+def i_solve():
     # State = (robot_position, remaining_dirt)
     initial_state = (start, frozenset(dirty_cells))
 
@@ -136,7 +136,7 @@ def solve():
 
 
 # Run the program
-solution = solve()
+solution = i_solve()
 
 if solution:
     print("Robot cleaning path:")
@@ -148,4 +148,4 @@ if solution:
     print("All dirt has been removed.")
 
 else:
-    print("No solution found.")
+    print("No solution found.") #homoo
